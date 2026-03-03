@@ -1,61 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Brain Stroke Detection | ML Project</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brain Stroke Detection | ML Project</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00f2fe;
+}
+
+/* Hero Section */
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    animation: fadeIn 2s ease;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: #00f2fe;
+    border-radius: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background: white;
+}
+
+/* Sections */
+section {
+    padding: 80px 10%;
+    text-align: center;
+    animation: slideUp 1.5s ease;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 15px;
+    width: 250px;
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.2);
+}
+
+/* Tech Tags */
+.tech span {
+    display: inline-block;
+    margin: 8px;
+    padding: 8px 15px;
+    background: #00f2fe;
+    border-radius: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideUp {
+    from {opacity: 0; transform: translateY(40px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media(max-width: 768px){
+    header h1 { font-size: 2rem; }
+    .card { width: 100%; }
+}
+</style>
 </head>
+
 <body>
 
-    <header>
-        <h1>Brain Stroke Detection Using Machine Learning</h1>
-        <p>AI-powered early stroke risk prediction system</p>
-        <a href="https://github.com/Vignesssshhhh/Brain-Stroke-Detection" target="_blank" class="btn">View GitHub</a>
-    </header>
+<nav>
+    <div><strong>Stroke AI</strong></div>
+    <div>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#tech">Tech</a>
+    </div>
+</nav>
 
-    <section class="about">
-        <h2> Project Overview</h2>
-        <p>
-            This project focuses on early stroke detection using machine learning models.
-            It analyzes patient health indicators to predict stroke risk with high accuracy.
-        </p>
-    </section>
+<header>
+    <h1>Brain Stroke Detection Using Machine Learning</h1>
+    <p>AI-powered system for early stroke risk prediction achieving 90%+ accuracy using advanced ML models.</p>
+    <a href="https://github.com/Vignesssshhhh/Brain-Stroke-Detection" target="_blank" class="btn">View GitHub</a>
+</header>
 
-    <section class="features">
-        <h2> Key Features</h2>
-        <ul>
-            <li>Implemented Logistic Regression, Random Forest & SVM</li>
-            <li>Achieved 90%+ model accuracy</li>
-            <li>Data preprocessing: missing value handling, normalization, feature selection</li>
-            <li>Cross-validation & hyperparameter tuning</li>
-        </ul>
-    </section>
+<section id="about">
+    <h2>📌 Project Overview</h2>
+    <p>
+        Developed machine learning models to analyze patient health indicators and predict stroke risk.
+        Applied preprocessing, feature engineering, and cross-validation techniques to improve performance.
+    </p>
+</section>
 
-    <section class="tech">
-        <h2> Tech Stack</h2>
-        <div class="tech-box">
-            <span>Python</span>
-            <span>Pandas</span>
-            <span>Scikit-learn</span>
-            <span>Google Colab</span>
-        </div>
-    </section>
+<section id="features">
+    <h2>🚀 Key Features</h2>
+    <div class="card-container">
+        <div class="card">Logistic Regression</div>
+        <div class="card">Random Forest</div>
+        <div class="card">Support Vector Machine</div>
+        <div class="card">90%+ Accuracy</div>
+        <div class="card">Cross Validation</div>
+        <div class="card">Hyperparameter Tuning</div>
+    </div>
+</section>
 
-    <section class="results">
-        <h2> Model Performance</h2>
-        <div class="card">
-            <h3>Accuracy</h3>
-            <p>90%+ across multiple models</p>
-        </div>
-    </section>
+<section id="tech">
+    <h2>🛠 Tech Stack</h2>
+    <div class="tech">
+        <span>Python</span>
+        <span>Pandas</span>
+        <span>Scikit-Learn</span>
+        <span>Google Colab</span>
+    </div>
+</section>
 
-    <footer>
-        <p>Developed by Vignesh Reddy | © 2026</p>
-    </footer>
-
-    <!-- Animation Script -->
-    <script src="script.js"></script>
+<footer>
+    Developed by Vignesh Reddy | © 2026
+</footer>
 
 </body>
 </html>
